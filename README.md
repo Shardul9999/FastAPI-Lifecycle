@@ -1,6 +1,4 @@
-Here’s a clean README you can directly save as `README.md`.
 
-````markdown id="ik4x9q"
 # FastAPI Request Lifecycle Demo
 
 A mini FastAPI project to understand how the request lifecycle works internally using:
