@@ -1,0 +1,13 @@
+Client Request
+   ↓
+Logging Middleware
+   ↓
+Auth Middleware
+   ↓
+Dependency Injection (get_db)
+   ↓
+Route Handler (/users)
+   ↓
+Response Returned
+   ↓
+Back through Middleware
