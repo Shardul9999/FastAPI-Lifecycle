@@ -31,9 +31,14 @@ async def auth_middleware(request: Request, call_next):
 
     token = request.headers.get("Authorization")
     if token != "secret-token":
-        raise HTTPException(
-            status = 401,
-            detail="Unauthorized"
+        return JSONResponse(
+            status_code = 401,
+            content = {
+                "error": {
+                    "message" : "Unauthorized",
+                    "status_code" : 401
+                }
+            }
         )
     
     response = await call_next(request)
